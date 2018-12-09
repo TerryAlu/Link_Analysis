@@ -1,6 +1,12 @@
 from scipy.sparse import csr_matrix
 import numpy as np
 
+"""
+Pagerank tutorials:
+    1. https://www.youtube.com/watch?v=_Wc9OkMKS3g
+    2. https://www.youtube.com/watch?v=P8Kt6Abq_rM
+"""
+
 EPSILON = 0.0001
 
 def pagerank(csr_links, d):

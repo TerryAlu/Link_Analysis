@@ -1,5 +1,6 @@
 from scipy.sparse import csr_matrix
 import numpy as np
+import sys
 
 """
 Pagerank tutorials:
@@ -102,7 +103,12 @@ def show_results(pr):
     print pr
 
 def main():
-    data, id_dict = read_data("hw3dataset/graph_8.txt")
+    if len(sys.argv) != 2:
+        print "Wrong parameters: {} <filepath>".format(__file__)
+        sys.exit(1)
+    filepath = sys.argv[1]
+
+    data, id_dict = read_data(filepath)
     csr_links = to_csr(data, id_dict)
     pr = pagerank(csr_links, 0.15)
     show_results(pr)

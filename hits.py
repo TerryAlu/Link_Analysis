@@ -1,7 +1,11 @@
 from scipy.sparse import csr_matrix
 import numpy as np
+import sys
+import os
+from ibm_dataconv import ibmdata_convert
 
 EPSILON = 0.01
+CONVERT_BASE = "hw3dataset/ibm_convert/"
 
 def hits(csr_links):
     """
@@ -91,6 +95,19 @@ def read_data(filepath):
     for x in keys:
         id_dict[x] = i
         i = i+1
+    
+    # print keys
+    print ">> Keys <<"
+    i = 0
+    for x in keys:
+        print x, "\t",
+        if i==6:
+            print ""
+            i = 0
+        else:
+            i = i + 1
+    print "\n"
+
     return data, id_dict
 
 def show_results(auth, hub):
@@ -101,7 +118,24 @@ def show_results(auth, hub):
     print hub
 
 def main():
-    data, id_dict = read_data("hw3dataset/graph_7.txt")
+
+    if len(sys.argv) != 2 and len(sys.argv) != 3:
+        print "wrong parameters: {} <filepath> [-c]".format(__file__)
+        sys.exit(1)
+    filepath = sys.argv[1]
+    if len(sys.argv) == 3:
+        convert = True
+    else:
+        convert = False
+
+    # convert ibm data to hw3dataset/ibm_convert folder
+    if convert:
+        _, filename = os.path.split(filepath)
+        ibmdata_convert(filepath, CONVERT_BASE+filename)
+        data, id_dict = read_data(CONVERT_BASE+filename)
+    else:
+        data, id_dict = read_data(filepath)
+
     csr_links = to_csr(data, id_dict)
     auth, hub = hits(csr_links)
     show_results(auth, hub)

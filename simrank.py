@@ -1,5 +1,6 @@
 from scipy.sparse import csr_matrix
 import numpy as np
+import sys
 
 C = 0.5
 
@@ -71,7 +72,12 @@ def show_results(csr_links, id_dict):
             print "S({}, {}): {}".format(a, b, simrank(csr_links, C, id_dict[a], id_dict[b]))
 
 def main():
-    data, id_dict = read_data("hw3dataset/graph_9.txt")
+    if len(sys.argv) != 2:
+        print "Wrong parameters: {} <filepath>".format(__file__)
+        sys.exit(1)
+    filepath = sys.argv[1]
+
+    data, id_dict = read_data(filepath)
     csr_links = to_csr(data, id_dict)
     show_results(csr_links, id_dict)
 

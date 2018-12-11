@@ -8,7 +8,8 @@ Pagerank tutorials:
     2. https://www.youtube.com/watch?v=P8Kt6Abq_rM
 """
 
-EPSILON = 0.0001
+EPSILON = 0.001
+np.set_printoptions(threshold=np.nan)
 
 def pagerank(csr_links, d):
     """

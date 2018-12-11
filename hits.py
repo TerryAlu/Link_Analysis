@@ -4,8 +4,9 @@ import sys
 import os
 from ibm_dataconv import ibmdata_convert
 
-EPSILON = 0.01
+EPSILON = 0.001
 CONVERT_BASE = "hw3dataset/ibm_convert/"
+np.set_printoptions(threshold=np.nan)
 
 def hits(csr_links):
     """

@@ -4,7 +4,7 @@ import sys
 
 C = 0.5
 
-def simrank(csr_links, c, a, b, rest_step=100):
+def simrank(csr_links, c, a, b, rest_step=5):
     """
     Simrank algorithm
     Notice: a & b are id not item string

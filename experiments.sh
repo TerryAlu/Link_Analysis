@@ -73,6 +73,10 @@ echo "Done"
 ## Experiment4: Performance
 echo -e "\t\t Experiment4: Performance" | tee -a ${result_file}
 
+if [ ! -d ${fullmesh_dir} ]; then
+    ./fullmesh.sh
+fi
+
 i=1
 no=12
 

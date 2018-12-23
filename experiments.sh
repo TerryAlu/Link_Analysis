@@ -5,10 +5,12 @@ result_file="results.txt"
 apriori_output="apriori.output"
 fpg_output="fpg.output"
 
+download_dataset_exec="download_dataset.sh"
+
 hits_exec="hits.py"
 simrank_exec="simrank.py"
 pagerank_exec="pagerank.py"
-
+ibm_convert_exec="ibm_dataconv.py"
 
 dataset_dir="hw3dataset/"
 fullmesh_dir="${dataset_dir}fullmesh/"
@@ -16,6 +18,9 @@ ibm_data_dir="${dataset_dir}ibm_convert/"
 
 # clear old experiment
 echo "" > $result_file
+
+# download dataset
+(cd ${dataset_dir} && ./${download_dataset_exec})
 
 ## Experiment1: HITS & PageRank - 6 graphs
 echo -e "\n\t\t Experiment1: HITS & Pagerank - 6 graphs" | tee -a ${result_file}
@@ -41,13 +46,24 @@ echo "Done"
 ## Experiment2: HITS & PageRank - transaction data from project 1
 echo -e "\n\t\t Experiment2: HITS & Pagerank - transaction data from project 1" | tee -a ${result_file}
 
-filename="test_10000.data"
-filepath="${ibm_data_dir}${filename}"
+ibmdata_filename="test_10000.data"
+filename_b="test_10000_b.data"
+filename_d="test_10000_d.data"
+if [ ! -f ${ibm_data_dir}${filename_b} ] || [! -f ${ibm_data_dir}${filename_d}]; then
+    echo -e "\n=== convert ${ibmdata_filename} : bidirected === \n"
+    python ${ibm_convert_exec} ${dataset_dir}${ibmdata_filename} ${ibm_data_dir}${ibmdata_filename} b
+    echo -e "\n=== convert ${ibmdata_filename} : directed === \n"
+    python ${ibm_convert_exec} ${dataset_dir}${ibmdata_filename} ${ibm_data_dir}${ibmdata_filename} d
+fi
 
-echo -e "\n=== ${hits_exec}: ${filename} === \n" | tee -a $result_file
-python ${hits_exec} ${filepath} >> $result_file
-echo -e "\n=== ${pagerank_exec}: ${filename} === \n" | tee -a $result_file
-python ${pagerank_exec} ${filepath} >> $result_file
+echo -e "\n=== ${hits_exec}: ${filename_b} === \n" | tee -a $result_file
+python ${hits_exec} ${ibm_data_dir}${filename_b} >> $result_file
+echo -e "\n=== ${pagerank_exec}: ${filename_b} === \n" | tee -a $result_file
+python ${pagerank_exec} ${ibm_data_dir}${filename_b} >> $result_file
+echo -e "\n=== ${hits_exec}: ${filename_d} === \n" | tee -a $result_file
+python ${hits_exec} ${ibm_data_dir}${filename_d} >> $result_file
+echo -e "\n=== ${pagerank_exec}: ${filename_d} === \n" | tee -a $result_file
+python ${pagerank_exec} ${ibm_data_dir}${filename_d} >> $result_file
 
 echo "Done"
 

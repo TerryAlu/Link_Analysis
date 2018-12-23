@@ -111970,362 +111970,206 @@ S(99, 99): 1.0
 
 		 Experiment4: Performance
 
+=== create fullmesh: 2 === 
+
+
 === hits.py: f_2.txt === 
 
-Traceback (most recent call last):
-  File "hits.py", line 145, in <module>
-    main()
-  File "hits.py", line 138, in main
-    data, id_dict = read_data(filepath)
-  File "hits.py", line 82, in read_data
-    with open(filepath) as fp:
-IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_2.txt'
 
-real	0m0.039s
-user	0m0.031s
-sys	0m0.008s
+real	0m0.041s
+user	0m0.034s
+sys	0m0.007s
 
 === pagerank.py: f_2.txt === 
 
-Traceback (most recent call last):
-  File "pagerank.py", line 118, in <module>
-    main()
-  File "pagerank.py", line 112, in main
-    data, id_dict = read_data(filepath)
-  File "pagerank.py", line 83, in read_data
-    with open(filepath) as fp:
-IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_2.txt'
 
 real	0m0.041s
-user	0m0.033s
-sys	0m0.008s
+user	0m0.024s
+sys	0m0.016s
+
+=== create fullmesh: 4 === 
+
 
 === hits.py: f_4.txt === 
 
-Traceback (most recent call last):
-  File "hits.py", line 145, in <module>
-    main()
-  File "hits.py", line 138, in main
-    data, id_dict = read_data(filepath)
-  File "hits.py", line 82, in read_data
-    with open(filepath) as fp:
-IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_4.txt'
 
-real	0m0.039s
-user	0m0.031s
-sys	0m0.008s
+real	0m0.043s
+user	0m0.027s
+sys	0m0.015s
 
 === pagerank.py: f_4.txt === 
 
-Traceback (most recent call last):
-  File "pagerank.py", line 118, in <module>
-    main()
-  File "pagerank.py", line 112, in main
-    data, id_dict = read_data(filepath)
-  File "pagerank.py", line 83, in read_data
-    with open(filepath) as fp:
-IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_4.txt'
 
-real	0m0.041s
+real	0m0.042s
 user	0m0.029s
-sys	0m0.012s
+sys	0m0.013s
+
+=== create fullmesh: 8 === 
+
 
 === hits.py: f_8.txt === 
 
-Traceback (most recent call last):
-  File "hits.py", line 145, in <module>
-    main()
-  File "hits.py", line 138, in main
-    data, id_dict = read_data(filepath)
-  File "hits.py", line 82, in read_data
-    with open(filepath) as fp:
-IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_8.txt'
 
 real	0m0.041s
-user	0m0.033s
-sys	0m0.008s
+user	0m0.015s
+sys	0m0.026s
 
 === pagerank.py: f_8.txt === 
 
-Traceback (most recent call last):
-  File "pagerank.py", line 118, in <module>
-    main()
-  File "pagerank.py", line 112, in main
-    data, id_dict = read_data(filepath)
-  File "pagerank.py", line 83, in read_data
-    with open(filepath) as fp:
-IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_8.txt'
 
-real	0m0.041s
-user	0m0.033s
-sys	0m0.008s
+real	0m0.040s
+user	0m0.040s
+sys	0m0.000s
+
+=== create fullmesh: 16 === 
+
 
 === hits.py: f_16.txt === 
 
-Traceback (most recent call last):
-  File "hits.py", line 145, in <module>
-    main()
-  File "hits.py", line 138, in main
-    data, id_dict = read_data(filepath)
-  File "hits.py", line 82, in read_data
-    with open(filepath) as fp:
-IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_16.txt'
 
-real	0m0.039s
-user	0m0.027s
-sys	0m0.012s
+real	0m0.041s
+user	0m0.037s
+sys	0m0.004s
 
 === pagerank.py: f_16.txt === 
 
-Traceback (most recent call last):
-  File "pagerank.py", line 118, in <module>
-    main()
-  File "pagerank.py", line 112, in main
-    data, id_dict = read_data(filepath)
-  File "pagerank.py", line 83, in read_data
-    with open(filepath) as fp:
-IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_16.txt'
-
-real	0m0.038s
-user	0m0.023s
-sys	0m0.015s
-
-=== hits.py: f_32.txt === 
-
-Traceback (most recent call last):
-  File "hits.py", line 145, in <module>
-    main()
-  File "hits.py", line 138, in main
-    data, id_dict = read_data(filepath)
-  File "hits.py", line 82, in read_data
-    with open(filepath) as fp:
-IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_32.txt'
-
-real	0m0.041s
-user	0m0.041s
-sys	0m0.000s
-
-=== pagerank.py: f_32.txt === 
-
-Traceback (most recent call last):
-  File "pagerank.py", line 118, in <module>
-    main()
-  File "pagerank.py", line 112, in main
-    data, id_dict = read_data(filepath)
-  File "pagerank.py", line 83, in read_data
-    with open(filepath) as fp:
-IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_32.txt'
-
-real	0m0.040s
-user	0m0.035s
-sys	0m0.004s
-
-=== hits.py: f_64.txt === 
-
-Traceback (most recent call last):
-  File "hits.py", line 145, in <module>
-    main()
-  File "hits.py", line 138, in main
-    data, id_dict = read_data(filepath)
-  File "hits.py", line 82, in read_data
-    with open(filepath) as fp:
-IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_64.txt'
-
-real	0m0.039s
-user	0m0.035s
-sys	0m0.004s
-
-=== pagerank.py: f_64.txt === 
-
-Traceback (most recent call last):
-  File "pagerank.py", line 118, in <module>
-    main()
-  File "pagerank.py", line 112, in main
-    data, id_dict = read_data(filepath)
-  File "pagerank.py", line 83, in read_data
-    with open(filepath) as fp:
-IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_64.txt'
-
-real	0m0.041s
-user	0m0.029s
-sys	0m0.012s
-
-=== hits.py: f_128.txt === 
-
-Traceback (most recent call last):
-  File "hits.py", line 145, in <module>
-    main()
-  File "hits.py", line 138, in main
-    data, id_dict = read_data(filepath)
-  File "hits.py", line 82, in read_data
-    with open(filepath) as fp:
-IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_128.txt'
-
-real	0m0.039s
-user	0m0.031s
-sys	0m0.008s
-
-=== pagerank.py: f_128.txt === 
-
-Traceback (most recent call last):
-  File "pagerank.py", line 118, in <module>
-    main()
-  File "pagerank.py", line 112, in main
-    data, id_dict = read_data(filepath)
-  File "pagerank.py", line 83, in read_data
-    with open(filepath) as fp:
-IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_128.txt'
 
 real	0m0.040s
 user	0m0.032s
 sys	0m0.008s
 
+=== create fullmesh: 32 === 
+
+
+=== hits.py: f_32.txt === 
+
+
+real	0m0.044s
+user	0m0.039s
+sys	0m0.004s
+
+=== pagerank.py: f_32.txt === 
+
+
+real	0m0.042s
+user	0m0.033s
+sys	0m0.008s
+
+=== create fullmesh: 64 === 
+
+
+=== hits.py: f_64.txt === 
+
+
+real	0m0.047s
+user	0m0.043s
+sys	0m0.004s
+
+=== pagerank.py: f_64.txt === 
+
+
+real	0m0.046s
+user	0m0.023s
+sys	0m0.023s
+
+=== create fullmesh: 128 === 
+
+
+=== hits.py: f_128.txt === 
+
+
+real	0m0.053s
+user	0m0.045s
+sys	0m0.008s
+
+=== pagerank.py: f_128.txt === 
+
+
+real	0m0.071s
+user	0m0.055s
+sys	0m0.016s
+
+=== create fullmesh: 256 === 
+
+
 === hits.py: f_256.txt === 
 
-Traceback (most recent call last):
-  File "hits.py", line 145, in <module>
-    main()
-  File "hits.py", line 138, in main
-    data, id_dict = read_data(filepath)
-  File "hits.py", line 82, in read_data
-    with open(filepath) as fp:
-IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_256.txt'
 
-real	0m0.039s
-user	0m0.035s
-sys	0m0.004s
+real	0m0.088s
+user	0m0.068s
+sys	0m0.020s
 
 === pagerank.py: f_256.txt === 
 
-Traceback (most recent call last):
-  File "pagerank.py", line 118, in <module>
-    main()
-  File "pagerank.py", line 112, in main
-    data, id_dict = read_data(filepath)
-  File "pagerank.py", line 83, in read_data
-    with open(filepath) as fp:
-IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_256.txt'
 
-real	0m0.039s
-user	0m0.035s
-sys	0m0.004s
+real	0m0.090s
+user	0m0.082s
+sys	0m0.008s
+
+=== create fullmesh: 512 === 
+
 
 === hits.py: f_512.txt === 
 
-Traceback (most recent call last):
-  File "hits.py", line 145, in <module>
-    main()
-  File "hits.py", line 138, in main
-    data, id_dict = read_data(filepath)
-  File "hits.py", line 82, in read_data
-    with open(filepath) as fp:
-IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_512.txt'
 
-real	0m0.040s
-user	0m0.024s
-sys	0m0.016s
+real	0m0.236s
+user	0m0.228s
+sys	0m0.008s
 
 === pagerank.py: f_512.txt === 
 
-Traceback (most recent call last):
-  File "pagerank.py", line 118, in <module>
-    main()
-  File "pagerank.py", line 112, in main
-    data, id_dict = read_data(filepath)
-  File "pagerank.py", line 83, in read_data
-    with open(filepath) as fp:
-IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_512.txt'
 
-real	0m0.039s
-user	0m0.028s
-sys	0m0.012s
+real	0m0.244s
+user	0m0.244s
+sys	0m0.000s
+
+=== create fullmesh: 1024 === 
+
 
 === hits.py: f_1024.txt === 
 
-Traceback (most recent call last):
-  File "hits.py", line 145, in <module>
-    main()
-  File "hits.py", line 138, in main
-    data, id_dict = read_data(filepath)
-  File "hits.py", line 82, in read_data
-    with open(filepath) as fp:
-IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_1024.txt'
 
-real	0m0.042s
-user	0m0.038s
-sys	0m0.004s
+real	0m0.802s
+user	0m0.757s
+sys	0m0.044s
 
 === pagerank.py: f_1024.txt === 
 
-Traceback (most recent call last):
-  File "pagerank.py", line 118, in <module>
-    main()
-  File "pagerank.py", line 112, in main
-    data, id_dict = read_data(filepath)
-  File "pagerank.py", line 83, in read_data
-    with open(filepath) as fp:
-IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_1024.txt'
 
-real	0m0.055s
-user	0m0.043s
-sys	0m0.012s
+real	0m0.856s
+user	0m0.807s
+sys	0m0.048s
+
+=== create fullmesh: 2048 === 
+
 
 === hits.py: f_2048.txt === 
 
-Traceback (most recent call last):
-  File "hits.py", line 145, in <module>
-    main()
-  File "hits.py", line 138, in main
-    data, id_dict = read_data(filepath)
-  File "hits.py", line 82, in read_data
-    with open(filepath) as fp:
-IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_2048.txt'
 
-real	0m0.041s
-user	0m0.030s
-sys	0m0.011s
+real	0m3.087s
+user	0m2.951s
+sys	0m0.136s
 
 === pagerank.py: f_2048.txt === 
 
-Traceback (most recent call last):
-  File "pagerank.py", line 118, in <module>
-    main()
-  File "pagerank.py", line 112, in main
-    data, id_dict = read_data(filepath)
-  File "pagerank.py", line 83, in read_data
-    with open(filepath) as fp:
-IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_2048.txt'
 
-real	0m0.040s
-user	0m0.039s
-sys	0m0.000s
+real	0m3.328s
+user	0m3.132s
+sys	0m0.196s
+
+=== create fullmesh: 4096 === 
+
 
 === hits.py: f_4096.txt === 
 
-Traceback (most recent call last):
-  File "hits.py", line 145, in <module>
-    main()
-  File "hits.py", line 138, in main
-    data, id_dict = read_data(filepath)
-  File "hits.py", line 82, in read_data
-    with open(filepath) as fp:
-IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_4096.txt'
 
-real	0m0.041s
-user	0m0.029s
-sys	0m0.012s
+real	0m12.825s
+user	0m12.352s
+sys	0m0.472s
 
 === pagerank.py: f_4096.txt === 
 
-Traceback (most recent call last):
-  File "pagerank.py", line 118, in <module>
-    main()
-  File "pagerank.py", line 112, in main
-    data, id_dict = read_data(filepath)
-  File "pagerank.py", line 83, in read_data
-    with open(filepath) as fp:
-IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_4096.txt'
 
-real	0m0.039s
-user	0m0.028s
-sys	0m0.012s
+real	0m14.336s
+user	0m12.886s
+sys	0m0.711s

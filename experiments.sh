@@ -11,6 +11,7 @@ hits_exec="hits.py"
 simrank_exec="simrank.py"
 pagerank_exec="pagerank.py"
 ibm_convert_exec="ibm_dataconv.py"
+fullmesh_exec="fullmesh.py"
 
 dataset_dir="hw3dataset/"
 fullmesh_dir="${dataset_dir}fullmesh/"
@@ -49,7 +50,7 @@ echo -e "\n\t\t Experiment2: HITS & Pagerank - transaction data from project 1" 
 ibmdata_filename="test_10000.data"
 filename_b="test_10000_b.data"
 filename_d="test_10000_d.data"
-if [ ! -f ${ibm_data_dir}${filename_b} ] || [! -f ${ibm_data_dir}${filename_d}]; then
+if [ ! -f ${ibm_data_dir}${filename_b} ] || [ ! -f ${ibm_data_dir}${filename_d} ]; then
     echo -e "\n=== convert ${ibmdata_filename} : bidirected === \n"
     python ${ibm_convert_exec} ${dataset_dir}${ibmdata_filename} ${ibm_data_dir}${ibmdata_filename} b
     echo -e "\n=== convert ${ibmdata_filename} : directed === \n"
@@ -90,7 +91,7 @@ echo "Done"
 echo -e "\n\t\t Experiment4: Performance" | tee -a ${result_file}
 
 if [ ! -d ${fullmesh_dir} ]; then
-    ./fullmesh.sh
+    mkdir ${fullmesh_dir}
 fi
 
 i=1
@@ -102,6 +103,11 @@ do
 
     filename="f_$n.txt"
     filepath="${fullmesh_dir}${filename}"
+
+    if [ ! -f ${filepath} ]; then
+        echo -e "\n=== create fullmesh: ${n} === \n" | tee -a $result_file
+        python ${fullmesh_exec} ${n} ${filepath} 
+    fi
 
     echo -e "\n=== ${hits_exec}: ${filename} === \n" | tee -a $result_file
     (time python ${hits_exec} ${filepath} > /dev/null) 2>> $result_file

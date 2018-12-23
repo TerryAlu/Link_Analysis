@@ -19,6 +19,8 @@ This project implemtns Hits, PageRank and SimRank algorithms.
     
 ###  Command
 
+`./experiments.sh` can output results for this homework to results.txt
+
 Notice: Modify EPSILON variable in python files if you need
 
 - hits.py
@@ -27,6 +29,7 @@ Notice: Modify EPSILON variable in python files if you need
     - python pagerank.py \<infile path\>
 - simrank.py
     - python simrank.py \<infile path\>
+
 
 ## Tools
 

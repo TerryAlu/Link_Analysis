@@ -1474,7 +1474,7 @@
 
 		 Experiment2: HITS & Pagerank - transaction data from project 1
 
-=== hits.py: test_10000.data === 
+=== hits.py: test_10000_b.data === 
 
 >> Keys <<
 0 	1 	11 	12 	13 	14 	15 	
@@ -1520,7 +1520,7 @@
   0.01301676  0.01301676  0.01301676  0.01301676  0.01301676  0.01301676
   0.01301676  0.01301676  0.01301676  0.01301676  0.01301676]
 
-=== pagerank.py: test_10000.data === 
+=== pagerank.py: test_10000_b.data === 
 
 >> Page Rank <<
 [ 0.01301471  0.01301471  0.01301471  0.01301471  0.01301471  0.01301471
@@ -1536,6 +1536,69 @@
   0.01301471  0.01301471  0.01301471  0.01301471  0.01301471  0.01301471
   0.01301471  0.01301471  0.01301471  0.01301471  0.01301471  0.01301471
   0.01301471  0.01301471  0.01301471  0.01301471  0.01301471]
+
+=== hits.py: test_10000_d.data === 
+
+>> Keys <<
+0 	1 	11 	12 	13 	14 	15 	
+16 	18 	19 	2 	20 	22 	23 	
+24 	26 	28 	29 	3 	30 	31 	
+32 	33 	34 	35 	37 	38 	39 	
+4 	41 	42 	43 	44 	45 	46 	
+47 	48 	49 	5 	50 	52 	55 	
+56 	57 	59 	6 	60 	63 	66 	
+67 	68 	69 	70 	72 	74 	75 	
+76 	77 	78 	79 	8 	81 	83 	
+84 	85 	86 	87 	88 	89 	9 	
+90 	91 	93 	94 	97 	98 	99 	
+
+
+>> Authority <<
+[ 0.01207948  0.01207194  0.01128088  0.01180826  0.01289315  0.01253905
+  0.01253152  0.01323218  0.01339541  0.01356869  0.01228792  0.01051994
+  0.01170027  0.01322715  0.00492722  0.01093934  0.01260686  0.01137631
+  0.01244362  0.01339039  0.01340797  0.01368673  0.01369928  0.01367668
+  0.01305638  0.01340295  0.01367919  0.0133929   0.0131041   0.01369426
+  0.01367668  0.01161991  0.01355614  0.01014073  0.01225778  0.01367919
+  0.01355614  0.01367668  0.01258928  0.01370431  0.01367668  0.0133477
+  0.01367668  0.01369426  0.01322464  0.01309657  0.01220756  0.01331003
+  0.01287557  0.01367668  0.01318446  0.01316186  0.01368422  0.01370682
+  0.0134155   0.01335774  0.01319451  0.01367919  0.01368924  0.01357623
+  0.01372691  0.01349838  0.01303127  0.01367668  0.01368422  0.01367668
+  0.01367668  0.01287055  0.01367668  0.01330752  0.01369175  0.01367919
+  0.01371937  0.01368422  0.01367919  0.01352851  0.01367919]
+
+>> Hubness <<
+[ 0.01247387  0.01342148  0.0136515   0.01342398  0.01340897  0.01307894
+  0.01311394  0.0127664   0.01307894  0.0127314   0.01210633  0.013599
+  0.01350399  0.01341648  0.01283141  0.013594    0.013634    0.0136515
+  0.01293642  0.0136215   0.01222384  0.01306644  0.01223135  0.0136165
+  0.00903599  0.01219384  0.01355149  0.01355649  0.01209383  0.01263889
+  0.0136165   0.01351149  0.01355399  0.01254388  0.01357399  0.01355149
+  0.01355399  0.0136165   0.01210633  0.01190631  0.0136165   0.01211883
+  0.0136165   0.01258638  0.01341648  0.01214884  0.013639    0.0136215
+  0.013629    0.0136165   0.01291642  0.01327896  0.01322395  0.01173629
+  0.01108372  0.01341898  0.01342148  0.01355149  0.01293642  0.01222634
+  0.01038114  0.013619    0.01326146  0.0136165   0.01307644  0.0136165
+  0.0136165   0.013629    0.0136165   0.0108937   0.01277891  0.01355149
+  0.0108962   0.01327146  0.01347898  0.01355399  0.01355149]
+
+=== pagerank.py: test_10000_d.data === 
+
+>> Page Rank <<
+[ 0.01199324  0.01199864  0.01144288  0.01191857  0.0128374   0.01252513
+  0.01253209  0.01316597  0.01333511  0.01349549  0.01211689  0.01052694
+  0.01169469  0.01316942  0.00575224  0.01078111  0.01244703  0.01135599
+  0.01229343  0.01333811  0.01332367  0.01372515  0.01371371  0.01373322
+  0.01300457  0.01332844  0.01373129  0.01333617  0.01296741  0.01371849
+  0.01373322  0.01143388  0.013506    0.01024029  0.01214402  0.01373129
+  0.013506    0.01373322  0.01248167  0.01370864  0.01373322  0.01339791
+  0.01373322  0.01371849  0.01317199  0.01297513  0.01219319  0.01343073
+  0.01285736  0.01373322  0.01322133  0.01324907  0.01372725  0.01370599
+  0.01331373  0.01338533  0.01321579  0.01373129  0.01372299  0.01348843
+  0.01368135  0.01357774  0.01303837  0.01373322  0.01372725  0.01373322
+  0.01373322  0.01285358  0.01373322  0.01308186  0.01372077  0.01373129
+  0.01369137  0.01372725  0.01373129  0.0135473   0.01373129]
 
 		 Experiment3: SimRank
 
@@ -111909,41 +111972,89 @@ S(99, 99): 1.0
 
 === hits.py: f_2.txt === 
 
+Traceback (most recent call last):
+  File "hits.py", line 145, in <module>
+    main()
+  File "hits.py", line 138, in main
+    data, id_dict = read_data(filepath)
+  File "hits.py", line 82, in read_data
+    with open(filepath) as fp:
+IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_2.txt'
 
-real	0m0.041s
-user	0m0.033s
-sys	0m0.007s
+real	0m0.039s
+user	0m0.031s
+sys	0m0.008s
 
 === pagerank.py: f_2.txt === 
 
+Traceback (most recent call last):
+  File "pagerank.py", line 118, in <module>
+    main()
+  File "pagerank.py", line 112, in main
+    data, id_dict = read_data(filepath)
+  File "pagerank.py", line 83, in read_data
+    with open(filepath) as fp:
+IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_2.txt'
 
-real	0m0.040s
-user	0m0.028s
-sys	0m0.012s
+real	0m0.041s
+user	0m0.033s
+sys	0m0.008s
 
 === hits.py: f_4.txt === 
 
+Traceback (most recent call last):
+  File "hits.py", line 145, in <module>
+    main()
+  File "hits.py", line 138, in main
+    data, id_dict = read_data(filepath)
+  File "hits.py", line 82, in read_data
+    with open(filepath) as fp:
+IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_4.txt'
 
-real	0m0.043s
+real	0m0.039s
 user	0m0.031s
-sys	0m0.012s
+sys	0m0.008s
 
 === pagerank.py: f_4.txt === 
 
+Traceback (most recent call last):
+  File "pagerank.py", line 118, in <module>
+    main()
+  File "pagerank.py", line 112, in main
+    data, id_dict = read_data(filepath)
+  File "pagerank.py", line 83, in read_data
+    with open(filepath) as fp:
+IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_4.txt'
 
 real	0m0.041s
-user	0m0.030s
-sys	0m0.011s
+user	0m0.029s
+sys	0m0.012s
 
 === hits.py: f_8.txt === 
 
+Traceback (most recent call last):
+  File "hits.py", line 145, in <module>
+    main()
+  File "hits.py", line 138, in main
+    data, id_dict = read_data(filepath)
+  File "hits.py", line 82, in read_data
+    with open(filepath) as fp:
+IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_8.txt'
 
 real	0m0.041s
-user	0m0.023s
-sys	0m0.019s
+user	0m0.033s
+sys	0m0.008s
 
 === pagerank.py: f_8.txt === 
 
+Traceback (most recent call last):
+  File "pagerank.py", line 118, in <module>
+    main()
+  File "pagerank.py", line 112, in main
+    data, id_dict = read_data(filepath)
+  File "pagerank.py", line 83, in read_data
+    with open(filepath) as fp:
+IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_8.txt'
 
 real	0m0.041s
 user	0m0.033s
@@ -111951,126 +112062,270 @@ sys	0m0.008s
 
 === hits.py: f_16.txt === 
 
+Traceback (most recent call last):
+  File "hits.py", line 145, in <module>
+    main()
+  File "hits.py", line 138, in main
+    data, id_dict = read_data(filepath)
+  File "hits.py", line 82, in read_data
+    with open(filepath) as fp:
+IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_16.txt'
 
-real	0m0.042s
-user	0m0.038s
-sys	0m0.004s
+real	0m0.039s
+user	0m0.027s
+sys	0m0.012s
 
 === pagerank.py: f_16.txt === 
 
+Traceback (most recent call last):
+  File "pagerank.py", line 118, in <module>
+    main()
+  File "pagerank.py", line 112, in main
+    data, id_dict = read_data(filepath)
+  File "pagerank.py", line 83, in read_data
+    with open(filepath) as fp:
+IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_16.txt'
 
-real	0m0.042s
-user	0m0.034s
-sys	0m0.008s
+real	0m0.038s
+user	0m0.023s
+sys	0m0.015s
 
 === hits.py: f_32.txt === 
 
+Traceback (most recent call last):
+  File "hits.py", line 145, in <module>
+    main()
+  File "hits.py", line 138, in main
+    data, id_dict = read_data(filepath)
+  File "hits.py", line 82, in read_data
+    with open(filepath) as fp:
+IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_32.txt'
+
+real	0m0.041s
+user	0m0.041s
+sys	0m0.000s
+
+=== pagerank.py: f_32.txt === 
+
+Traceback (most recent call last):
+  File "pagerank.py", line 118, in <module>
+    main()
+  File "pagerank.py", line 112, in main
+    data, id_dict = read_data(filepath)
+  File "pagerank.py", line 83, in read_data
+    with open(filepath) as fp:
+IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_32.txt'
+
+real	0m0.040s
+user	0m0.035s
+sys	0m0.004s
+
+=== hits.py: f_64.txt === 
+
+Traceback (most recent call last):
+  File "hits.py", line 145, in <module>
+    main()
+  File "hits.py", line 138, in main
+    data, id_dict = read_data(filepath)
+  File "hits.py", line 82, in read_data
+    with open(filepath) as fp:
+IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_64.txt'
+
+real	0m0.039s
+user	0m0.035s
+sys	0m0.004s
+
+=== pagerank.py: f_64.txt === 
+
+Traceback (most recent call last):
+  File "pagerank.py", line 118, in <module>
+    main()
+  File "pagerank.py", line 112, in main
+    data, id_dict = read_data(filepath)
+  File "pagerank.py", line 83, in read_data
+    with open(filepath) as fp:
+IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_64.txt'
+
+real	0m0.041s
+user	0m0.029s
+sys	0m0.012s
+
+=== hits.py: f_128.txt === 
+
+Traceback (most recent call last):
+  File "hits.py", line 145, in <module>
+    main()
+  File "hits.py", line 138, in main
+    data, id_dict = read_data(filepath)
+  File "hits.py", line 82, in read_data
+    with open(filepath) as fp:
+IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_128.txt'
+
+real	0m0.039s
+user	0m0.031s
+sys	0m0.008s
+
+=== pagerank.py: f_128.txt === 
+
+Traceback (most recent call last):
+  File "pagerank.py", line 118, in <module>
+    main()
+  File "pagerank.py", line 112, in main
+    data, id_dict = read_data(filepath)
+  File "pagerank.py", line 83, in read_data
+    with open(filepath) as fp:
+IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_128.txt'
 
 real	0m0.040s
 user	0m0.032s
 sys	0m0.008s
 
-=== pagerank.py: f_32.txt === 
+=== hits.py: f_256.txt === 
 
+Traceback (most recent call last):
+  File "hits.py", line 145, in <module>
+    main()
+  File "hits.py", line 138, in main
+    data, id_dict = read_data(filepath)
+  File "hits.py", line 82, in read_data
+    with open(filepath) as fp:
+IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_256.txt'
 
-real	0m0.042s
-user	0m0.042s
-sys	0m0.000s
-
-=== hits.py: f_64.txt === 
-
-
-real	0m0.043s
+real	0m0.039s
 user	0m0.035s
-sys	0m0.009s
+sys	0m0.004s
 
-=== pagerank.py: f_64.txt === 
+=== pagerank.py: f_256.txt === 
 
+Traceback (most recent call last):
+  File "pagerank.py", line 118, in <module>
+    main()
+  File "pagerank.py", line 112, in main
+    data, id_dict = read_data(filepath)
+  File "pagerank.py", line 83, in read_data
+    with open(filepath) as fp:
+IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_256.txt'
 
-real	0m0.046s
-user	0m0.033s
+real	0m0.039s
+user	0m0.035s
+sys	0m0.004s
+
+=== hits.py: f_512.txt === 
+
+Traceback (most recent call last):
+  File "hits.py", line 145, in <module>
+    main()
+  File "hits.py", line 138, in main
+    data, id_dict = read_data(filepath)
+  File "hits.py", line 82, in read_data
+    with open(filepath) as fp:
+IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_512.txt'
+
+real	0m0.040s
+user	0m0.024s
+sys	0m0.016s
+
+=== pagerank.py: f_512.txt === 
+
+Traceback (most recent call last):
+  File "pagerank.py", line 118, in <module>
+    main()
+  File "pagerank.py", line 112, in main
+    data, id_dict = read_data(filepath)
+  File "pagerank.py", line 83, in read_data
+    with open(filepath) as fp:
+IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_512.txt'
+
+real	0m0.039s
+user	0m0.028s
 sys	0m0.012s
 
-=== hits.py: f_128.txt === 
+=== hits.py: f_1024.txt === 
 
+Traceback (most recent call last):
+  File "hits.py", line 145, in <module>
+    main()
+  File "hits.py", line 138, in main
+    data, id_dict = read_data(filepath)
+  File "hits.py", line 82, in read_data
+    with open(filepath) as fp:
+IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_1024.txt'
+
+real	0m0.042s
+user	0m0.038s
+sys	0m0.004s
+
+=== pagerank.py: f_1024.txt === 
+
+Traceback (most recent call last):
+  File "pagerank.py", line 118, in <module>
+    main()
+  File "pagerank.py", line 112, in main
+    data, id_dict = read_data(filepath)
+  File "pagerank.py", line 83, in read_data
+    with open(filepath) as fp:
+IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_1024.txt'
 
 real	0m0.055s
 user	0m0.043s
 sys	0m0.012s
 
-=== pagerank.py: f_128.txt === 
-
-
-real	0m0.053s
-user	0m0.045s
-sys	0m0.008s
-
-=== hits.py: f_256.txt === 
-
-
-real	0m0.090s
-user	0m0.070s
-sys	0m0.020s
-
-=== pagerank.py: f_256.txt === 
-
-
-real	0m0.094s
-user	0m0.073s
-sys	0m0.020s
-
-=== hits.py: f_512.txt === 
-
-
-real	0m0.251s
-user	0m0.247s
-sys	0m0.004s
-
-=== pagerank.py: f_512.txt === 
-
-
-real	0m0.244s
-user	0m0.231s
-sys	0m0.012s
-
-=== hits.py: f_1024.txt === 
-
-
-real	0m0.853s
-user	0m0.824s
-sys	0m0.028s
-
-=== pagerank.py: f_1024.txt === 
-
-
-real	0m0.880s
-user	0m0.824s
-sys	0m0.056s
-
 === hits.py: f_2048.txt === 
 
+Traceback (most recent call last):
+  File "hits.py", line 145, in <module>
+    main()
+  File "hits.py", line 138, in main
+    data, id_dict = read_data(filepath)
+  File "hits.py", line 82, in read_data
+    with open(filepath) as fp:
+IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_2048.txt'
 
-real	0m3.066s
-user	0m2.946s
-sys	0m0.120s
+real	0m0.041s
+user	0m0.030s
+sys	0m0.011s
 
 === pagerank.py: f_2048.txt === 
 
+Traceback (most recent call last):
+  File "pagerank.py", line 118, in <module>
+    main()
+  File "pagerank.py", line 112, in main
+    data, id_dict = read_data(filepath)
+  File "pagerank.py", line 83, in read_data
+    with open(filepath) as fp:
+IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_2048.txt'
 
-real	0m3.360s
-user	0m3.200s
-sys	0m0.160s
+real	0m0.040s
+user	0m0.039s
+sys	0m0.000s
 
 === hits.py: f_4096.txt === 
 
+Traceback (most recent call last):
+  File "hits.py", line 145, in <module>
+    main()
+  File "hits.py", line 138, in main
+    data, id_dict = read_data(filepath)
+  File "hits.py", line 82, in read_data
+    with open(filepath) as fp:
+IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_4096.txt'
 
-real	0m1.026s
-user	0m0.944s
-sys	0m0.064s
+real	0m0.041s
+user	0m0.029s
+sys	0m0.012s
 
 === pagerank.py: f_4096.txt === 
 
+Traceback (most recent call last):
+  File "pagerank.py", line 118, in <module>
+    main()
+  File "pagerank.py", line 112, in main
+    data, id_dict = read_data(filepath)
+  File "pagerank.py", line 83, in read_data
+    with open(filepath) as fp:
+IOError: [Errno 2] No such file or directory: 'hw3dataset/fullmesh/f_4096.txt'
 
-real	0m1.891s
-user	0m1.623s
-sys	0m0.268s
+real	0m0.039s
+user	0m0.028s
+sys	0m0.012s

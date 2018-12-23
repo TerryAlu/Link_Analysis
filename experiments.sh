@@ -18,7 +18,7 @@ ibm_data_dir="${dataset_dir}ibm_convert/"
 echo "" > $result_file
 
 ## Experiment1: HITS & PageRank - 6 graphs
-echo -e "\t\t Experiment1: HITS & Pagerank - 6 graphs" | tee -a ${result_file}
+echo -e "\n\t\t Experiment1: HITS & Pagerank - 6 graphs" | tee -a ${result_file}
 
 i=1
 no=6
@@ -39,7 +39,7 @@ done
 echo "Done"
 
 ## Experiment2: HITS & PageRank - transaction data from project 1
-echo -e "\t\t Experiment2: HITS & Pagerank - transaction data from project 1" | tee -a ${result_file}
+echo -e "\n\t\t Experiment2: HITS & Pagerank - transaction data from project 1" | tee -a ${result_file}
 
 filename="test_10000.data"
 filepath="${ibm_data_dir}${filename}"
@@ -52,7 +52,7 @@ python ${pagerank_exec} ${filepath} >> $result_file
 echo "Done"
 
 ## Experiment3: SimRank
-echo -e "\t\t Experiment3: SimRank" | tee -a ${result_file}
+echo -e "\n\t\t Experiment3: SimRank" | tee -a ${result_file}
 
 i=1
 no=5
@@ -71,7 +71,7 @@ done
 echo "Done"
 
 ## Experiment4: Performance
-echo -e "\t\t Experiment4: Performance" | tee -a ${result_file}
+echo -e "\n\t\t Experiment4: Performance" | tee -a ${result_file}
 
 if [ ! -d ${fullmesh_dir} ]; then
     ./fullmesh.sh

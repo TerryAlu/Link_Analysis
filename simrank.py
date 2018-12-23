@@ -1,31 +1,62 @@
-from scipy.sparse import csr_matrix
 import numpy as np
 import sys
 
 C = 0.5
+EPSILON = 0.001
 
-def simrank(csr_links, c, a, b, rest_step=5):
+def simrank(links, c):
     """
     Simrank algorithm
-    Notice: a & b are id not item string
     """
-    # prevent endless loop
-    if rest_step==0:
-        # print "rest_step limitation occured!"
-        return 0
-    if a == b:
-        return 1.0
-    _, a_inlist = csr_links.T[a].nonzero()
-    _, b_inlist = csr_links.T[b].nonzero()
+    assert c < 1
 
-    ret = 0
-    denum = len(a_inlist)*len(b_inlist)
-    for ai in a_inlist:
-        for bi in b_inlist:
-            ret = ret + 1.0 * c * simrank(csr_links, c, ai, bi, rest_step-1) / denum
-    return ret
+    # get indicator vector for elements with zero in-degree
+    _, n = links.shape
+    zero_inlist = []
+    for x in xrange(n):
+        inlist = links.T[x].nonzero()[0]
+        zero_inlist.append(True if len(inlist)==0 else False)
+
+    ranks = np.identity(n)
+    n_ranks = np.identity(n)
+
+    print "delta of each iterations: "
+    
+    # update
+    while True:
+        # from (i, j)
+        for i in xrange(n):
+            for j in xrange(n):
+                # to (x, y)
+                for x in links[i].nonzero()[0]:
+                    for y in links[j].nonzero()[0]:
+                        if x == y:
+                            continue
+                        # propagate similarity
+                        n_ranks[x][y] = n_ranks[x][y] + ranks[i][j]
+
+        # n_ranks * c / (in-degree(i)*in-degree(j))
+        for i in xrange(n):
+            for j in xrange(n):
+                if i == j:
+                    continue
+                i_in_count = len(links.T[i].nonzero()[0])
+                j_in_count = len(links.T[j].nonzero()[0])
+                if i_in_count==0 or j_in_count==0:
+                    continue
+                n_ranks[i][j] = 1.0 * c * n_ranks[i][j] / (i_in_count * j_in_count)
+
+        delta = abs(np.sum(n_ranks)-np.sum(ranks))
+        print delta
+        if delta <= EPSILON:
+            print ""
+            break
+        ranks = n_ranks.copy()
+        n_ranks = np.identity(n)
+
+    return n_ranks
         
-def to_csr(data, id_dict):
+def to_matrix(data, id_dict):
     """
     Convert dict. data to csr format
     """
@@ -34,7 +65,7 @@ def to_csr(data, id_dict):
         for x in v:
             # create link
             dense[id_dict[k]][id_dict[x]] = 1
-    return csr_matrix(dense)
+    return dense
 
 def read_data(filepath):
     """
@@ -60,16 +91,18 @@ def read_data(filepath):
         i = i+1
     return data, id_dict
 
-def show_results(csr_links, id_dict):
+def show_results(ranks, id_dict):
     print "C = {}".format(C)
     print "=======\n"
     keys = id_dict.keys()
     keys.sort()
     for i in xrange(len(keys)):
-        for j in xrange(i+1, len(keys)):
+        for j in xrange(i, len(keys)):
             a = keys[i]
             b = keys[j]
-            print "S({}, {}): {}".format(a, b, simrank(csr_links, C, id_dict[a], id_dict[b]))
+            print "S({}, {}): {}".format(a, b, ranks[i][j])
+    # print ""
+    # print ranks
 
 def main():
     if len(sys.argv) != 2:
@@ -78,8 +111,9 @@ def main():
     filepath = sys.argv[1]
 
     data, id_dict = read_data(filepath)
-    csr_links = to_csr(data, id_dict)
-    show_results(csr_links, id_dict)
+    links = to_matrix(data, id_dict)
+    ranks = simrank(links, C)
+    show_results(ranks, id_dict)
 
 if __name__ == '__main__':
     main()
